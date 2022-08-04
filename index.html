@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular precio</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <div class="container text-center border border-primary">
+        <div class="row align-items-start">
+          <div class="col-sm-6 col-md-6 ">
+            <h5>Gastos hormiga mensuales</h5>            
+            <table class="table" id="miTabla">
+                <thead>
+                  <tr>                     
+                    <th scope="col">Gasto</th>
+                    <th scope="col">Costo</th>  
+                    <th scope="col">Accion</th>                  
+                  </tr>
+                </thead>
+                
+              </table>               
+              <button type="button" class="btn btn-success" onclick="agregaGastos()" >Agrega un gasto</button>
+              <button type="button" class="btn btn-warning" onclick="calcularGastos()" >Calcular Gastos</button>
+ 
+
+
+          </div>
+          <div class="col-sm-6 col-md-6">
+            <h5>Control de gastos</h5>
+            <div>              
+              <input id="meses" type="text" placeholder="Ingresa los meses que quieres calcular">
+            </div>
+            <div id="totalmes"></div>
+           
+          </div>          
+        </div>        
+
+        <!-- <div class="row align-items-start">
+            <div class="col-sm-6 col-md-6">
+              
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <h5>Tasas de inversion anual</h5>
+              <select name="cars" id="">
+                <option value="volvo">Selecciona un porcentaje de inversion</option>
+                <option value="saab">1</option>
+                <option value="mercedes">2</option>
+                <option value="audi">3</option>
+              </select>
+
+
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" hidden></th>
+                    <th scope="col">BBVA</th>
+                    <th scope="col">CETES</th>                  
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" hidden>1</th>
+                    <td>10%</td>
+                    <td>%12</td>                   
+                  </tr>
+                           
+                </tbody>
+              </table> 
+            </div>
+            
+          </div> -->
+
+         
+      </div>
+
+
+
+    <script src="js/bootstrap.js"></script>    
+    <script src="js/funciones.js"></script>
+
+</body>
+</html>

@@ -1,8 +1,19 @@
+let addG = document.getElementById("btnAddG")
+    addG.addEventListener("click", agregaGastos)
+    addG.onmousemove = () => {console.log("Move")}
+
+ let calG = document.getElementById("btnCalG")
+    calG.addEventListener("click", calcularGastos)
+
+let cleanG = document.getElementById("btnCleanG")
+    cleanG.addEventListener("click", cleanGastos)    
+ 
 function agregaGastos() {
     const adTd=document.getElementById("miTabla");
     adTd.insertRow(-1).innerHTML=
     "<tr><td><input type='text' placeholder='Nombre del gasto'></td><td><input class='costoG' type='text' placeholder='Costo' ></td><td><button type='button' class='btn btn-danger' onclick='deleteGasto()'>D</button></tr></tr>";
 }
+
 function calcularGastos() {   
     document.getElementById("totalmes").innerHTML="";
     document.getElementById("totalmeses").innerHTML=""; 
@@ -39,12 +50,12 @@ function calcularGastos() {
 }
 function deleteGasto() {
 //alert("hola")      
-} 
-
-document.getElementById("limpiarGastos").addEventListener("click", function() { 
+}  
+function cleanGastos() {
     document.getElementById("miTabla").innerHTML="";
     document.getElementById("totalmes").innerHTML="";
     document.getElementById("meses").value="";
+}
 
-    // alert("hola")
-})
+ 
+

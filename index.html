@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcular precio</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">    
 
 </head>
 <body>
@@ -44,50 +44,63 @@
             <div id="totalmeses"></div>
            
           </div>          
-        </div>        
-
-        <!-- <div class="row align-items-start">
-            <div class="col-sm-6 col-md-6">
-              
-            </div>
-            <div class="col-sm-6 col-md-6">
-              <h5>Tasas de inversion anual</h5>
-              <select name="cars" id="">
-                <option value="volvo">Selecciona un porcentaje de inversion</option>
-                <option value="saab">1</option>
-                <option value="mercedes">2</option>
-                <option value="audi">3</option>
-              </select>
-
-
-
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col" hidden></th>
-                    <th scope="col">BBVA</th>
-                    <th scope="col">CETES</th>                  
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row" hidden>1</th>
-                    <td>10%</td>
-                    <td>%12</td>                   
-                  </tr>
-                           
-                </tbody>
-              </table> 
-            </div>
-            
-          </div> -->
-
-         
+        </div>     
       </div>
 
 
 
-    <script src="js/bootstrap.js"></script>    
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Iniciar Sesión
+</button>
+<button type="button" class="btn btn-danger" id="cerrarSesion">
+  Cerrar Sesión
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Inicia sesión-> user: root pass:1234</h5>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      </div>
+      <div class="modal-body">
+        
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">
+            
+          </span>
+          <input type="text" class="form-control" placeholder="USUARIO" id="user">
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">@</span>
+          <input type="password" class="form-control" placeholder="CONTRASEÑA" id="pass">
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal" id="loginGo">Iniciar sesion</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.min.js"></script>    
     <script src="js/funciones.js"></script>
 
 </body>

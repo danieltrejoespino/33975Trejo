@@ -1,3 +1,23 @@
+const userValido='root'
+const passValido=1234
+
+ if (sessionStorage.getItem('userLS')===null && sessionStorage.getItem('passLS')===null) {
+    alert("Inicia sesion para continuar")
+
+
+ }else{
+    alert("Tu sesion continua iniciada")
+    
+ }
+ 
+
+let iniciaSesion = document.getElementById("loginGo")
+iniciaSesion.addEventListener("click", login)
+
+
+let closeS = document.getElementById("cerrarSesion")
+    closeS.addEventListener("click", closeSesion)
+
 let addG = document.getElementById("btnAddG")
     addG.addEventListener("click", agregaGastos)
     addG.onmousemove = () => {console.log("Move")}
@@ -57,5 +77,28 @@ function cleanGastos() {
     document.getElementById("meses").value="";
 }
 
+function login() {
+    var userLogin = document.getElementById("user").value;
+    var passLogin = document.getElementById("pass").value;  
+    sessionStorage.setItem("userLS",userLogin);
+    sessionStorage.setItem("passLS",passLogin);
+    let validaUser =  sessionStorage.getItem('userLS');
+    let validaPass =  sessionStorage.getItem('passLS');
+
+    if (validaUser==userValido && validaPass==passValido) {
  
+        document.getElementById("user").value="";
+        document.getElementById("pass").value="";
+        alert("USUARIO  y contraseña CORRECTO")        
+    }else{
+        document.getElementById("user").value="";
+        document.getElementById("pass").value="";
+        alert("USUARIO o contraseña INCORRECTO")
+    }
+}
+
+function closeSesion() {
+    sessionStorage.clear()
+    alert ("Sesión cerrada")
+}
 

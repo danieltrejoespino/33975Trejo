@@ -25,7 +25,8 @@
                   </tr>
                 </thead>
                 
-              </table>               
+              </table>      
+              <br><br>         
               <button type="button" class="btn btn-success" id="btnAddG" >Agrega un gasto</button>
               <button type="button" class="btn btn-info" id="btnCleanG" >Limpiar Gastos</button>
               <button type="button" class="btn btn-warning" id="btnCalG" >Calcular Gastos</button>
@@ -36,6 +37,7 @@
 
           </div>
           <div class="col-sm-12 col-md-12">
+            <br><br>
             <h5>Control de gastos</h5>
             <div>              
               <input id="meses" type="text" placeholder="Ingresa los meses que quieres calcular">
@@ -43,13 +45,30 @@
             <div id="totalmes"></div>
             <div id="totalmeses"></div>
            
+          </div>   
+          <div id="totalmes"></div>
+          <div id="totalmeses"></div>
+
+          <div class="col-sm-12 col-md-12">
+            <br><br>
+            <h5>Metas</h5>
+            <div>     
+              <p>Ingresa una meta de ahorro, evitando los gastos hormiga te diremos en cuanto tiempo logras conseguir tu meta</p>         
+              <input id="nombreAhorro" type="text" placeholder="Nombre">
+              <input id="costoAhorro" type="text" placeholder="Meta por ahorrar">
+            </div>
+            <br><br>         
+              <!-- <button type="button" class="btn btn-success" id="btnAddMeta" >Agrega una meta nueva</button> -->
+              <!-- <button type="button" class="btn btn-info" id="btnCleanMeta" >Limpiar Metas</button> -->
+              <button type="button" class="btn btn-warning" id="btnCalMeta" >Calcular</button>
+           
           </div>          
         </div>     
       </div>
 
 
 
-
+      <br><br>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
   Iniciar Sesión

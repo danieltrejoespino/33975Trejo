@@ -45,6 +45,9 @@ let cleanG = document.getElementById("btnCleanG")
 
 let calMetas = document.getElementById("btnCalMeta")
     calMetas.addEventListener("click", metas) 
+    
+let infoGastos = document.getElementById("btnIfoG")
+    infoGastos.addEventListener("click", infoGastosH) 
  
 function agregaGastos() {
     const adTd=document.getElementById("miTabla");
@@ -73,6 +76,7 @@ function calcularGastos() {
             let gastos =document.getElementsByClassName("costoG")[i].value          
             total.push(gastos)            
         }
+        
         for (let i = 0; i < total.length; i++) {
             sum += parseFloat(total[i])
         }
@@ -89,7 +93,27 @@ function calcularGastos() {
         //     document.getElementById("totalmes").innerHTML+="<h5>"+"Lo que gastas en un mes es un total de: $"+sum+"</h5>"; 
         // }  
     }         
+    
+
+
 }//calcularGastos
+function infoGastosH() {
+    const lista = document.querySelector('#gastosEjemplo')
+    fetch("./assets/data.json")
+    .then(response => {
+    return response.json();
+    })
+    .then(data => {
+
+        data.forEach((producto) => {
+            const li = document.createElement('p')
+            li.innerHTML = `${producto.nombre} $ ${producto.precio}</p> `
+            lista.append(li)
+        })
+
+        console.log(data)
+    });
+}
 
 function metas() {  
     function metaAhorro(nombre, ahorro) {

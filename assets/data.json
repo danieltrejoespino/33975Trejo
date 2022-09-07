@@ -1,0 +1,13 @@
+[
+    {"id": 1,"nombre": "Neflix ", "precio": 190},
+    {"id": 2,"nombre": "Spotify ", "precio": 250},
+    {"id": 3,"nombre": "YouTube ", "precio": 150},
+    {"id": 4,"nombre": "Crunch Roll ", "precio": 100},
+    {"id": 5,"nombre": "Disney Plus ", "precio": 200},
+    {"id": 6,"nombre": "HBO ", "precio": 159},
+    {"id": 7,"nombre": "Uber Plus ", "precio": 99},
+    {"id": 8,"nombre": "Prime VIdeo ", "precio": 99},
+    {"id": 9,"nombre": "Rappi Prime ", "precio": 100},
+    {"id": 10,"nombre": "Game Pass ", "precio": 250},
+    {"id": 11,"nombre": "Apple Music", "precio": 130}
+]

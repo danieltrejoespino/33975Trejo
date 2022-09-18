@@ -52,7 +52,7 @@ let infoGastos = document.getElementById("btnIfoG")
 function agregaGastos() {
     const adTd=document.getElementById("miTabla");
     adTd.insertRow(-1).innerHTML=
-    "<tr><td><input type='text' placeholder='Nombre del gasto'></td><td><input class='costoG' type='text' placeholder='Costo' ></td><td><button type='button' class='btn btn-danger' onclick='deleteGasto()'>D</button></tr></tr>"
+    "<tr><td><input type='text' placeholder='Nombre del gasto'></td><td><input class='costoG' type='text' placeholder='Costo' ></td></tr></tr>"
 }
 
 function calcularGastos() {   
@@ -71,6 +71,8 @@ function calcularGastos() {
             title: 'Ingresa minimo un mes para continuar', 
             confirmButtonText: 'Continuar', 
           })
+        document.getElementById("meses").style.backgroundColor = 'yellow';
+  
     }else{
         for (let i = 0; i <gastos.length; i++) {
             let gastos =document.getElementsByClassName("costoG")[i].value          
@@ -84,7 +86,7 @@ function calcularGastos() {
         gastosHormiga=sum
 
         tm.innerHTML+='<h4>Tu gasto mas grande es de: $'+Math.max(...total)+'</h4>'
-       
+        document.getElementById("meses").style.backgroundColor = 'white';
 
         // if (mes>1) {
         //     let sumMes=sum*mes;
@@ -99,6 +101,7 @@ function calcularGastos() {
 }//calcularGastos
 function infoGastosH() {
     const lista = document.querySelector('#gastosEjemplo')
+    lista.innerHTML=''
     fetch("./assets/data.json")
     .then(response => {
     return response.json();

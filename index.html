@@ -14,15 +14,32 @@
     <!-- Proyecto de JS -->  
     <div class="container text-center border border-primary">
         <div class="row align-items-start">
-          <div class="col-sm-12 col-md-12 ">
-            <h5>Daniel Trejo</h5>            
+             <div class="col-lg-4">
+              <h5>33975</h5>
+              <h5>Daniel Trejo</h5>                 
+            </div>
+            <!-- Button trigger modal -->
+            <div class="col-lg-4">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Iniciar Sesión
+              </button><br>
+              <button type="button" class="btn btn-danger" id="cerrarSesion">
+                Cerrar Sesión
+              </button>
+            </div>
+            <div class="col-lg-4">
+              <h5>¿Necesitas ejemplos de gastos hormiga?</h5>
+            <button type="button" class="btn btn-info" id="btnIfoG" data-bs-toggle="modal" data-bs-target="#infoGastos">¡CLICK AQUI!</button>
+            </div>
+            
+           <div class="col-sm-12 col-md-12 ">
+            <br><br>
             <h5>Gastos Hormiga Mensuales</h5>            
             <table class="table" id="miTabla">
                 <thead>
                   <tr>                     
                     <th scope="col">Gasto</th>
-                    <th scope="col">Costo</th>  
-                    <th scope="col">Accion</th>                  
+                    <th scope="col">Costo</th>   
                   </tr>
                 </thead>
                 
@@ -60,27 +77,10 @@
               <!-- <button type="button" class="btn btn-info" id="btnCleanMeta" >Limpiar Metas</button> -->
               <button type="button" class="btn btn-warning" id="btnCalMeta" >Calcular</button>
            
-          </div>         
-          <div class="col-sm-12 col-md-12">
-            <br><br>
-            <h5>¿Necesitas ejemplos de gastos hormiga?</h5>
-            <button type="button" class="btn btn-info" id="btnIfoG" >¡CLICK AQUI!</button>
-           <div id="gastosEjemplo"></div>
-           
-          </div>          
+          </div>  
         </div>     
       </div>
-
-
-
-      <br><br>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Iniciar Sesión
-</button>
-<button type="button" class="btn btn-danger" id="cerrarSesion">
-  Cerrar Sesión
-</button>
+ 
 
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -112,6 +112,28 @@
     </div>
   </div>
 </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="infoGastos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ejemplos de gastos hormiga</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+           <div id="gastosEjemplo"></div>
+          </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 
